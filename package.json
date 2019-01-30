@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-webpack4vue2",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "build SPA with webpack and vue for sails",
   "main": "index.js",
   "sails": {
@@ -13,7 +13,7 @@
   "keywords": [
     "sails",
     "webpack",
-    "bue"
+    "vue"
   ],
   "author": "dtnet",
   "license": "ISC",
