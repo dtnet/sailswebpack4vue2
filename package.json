@@ -1,0 +1,37 @@
+{
+  "name": "sails-hook-webpack4vue2",
+  "version": "2.0.1",
+  "description": "build SPA with webpack and vue for sails",
+  "main": "index.js",
+  "sails": {
+    "isHook": true,
+    "hookName": "webpack4vue2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sails",
+    "webpack",
+    "bue"
+  ],
+  "author": "dtnet",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli-service": "^3.3.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.21",
+    "vuex": "^3.0.1",
+    "webpack-dev-middleware": "^3.5.1",
+    "webpack-hot-middleware": "^2.24.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dtnet/sailswebpack4vue2.git"
+  },
+  "devDependencies": {
+    "sails": "^1.1.0"
+  }
+}
