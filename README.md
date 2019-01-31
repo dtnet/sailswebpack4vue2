@@ -149,5 +149,18 @@ export default new Vuex.Store({
 }
 </style>
 ````
-
+[config webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware)
+````
+# config/webpackdev.js
+module.exports.webpackdev = {
+  /* config */
+}
+````
+[config webpack-hot-middleware](https://github.com/webpack-contrib/webpack-hot-middleware)
+````
+# config/webpackhot.js
+module.exports.webpackhot = {
+  /* config */
+}
+````
 

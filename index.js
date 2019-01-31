@@ -11,13 +11,14 @@ module.exports = sails => {
 
       let compiler = webpack(webpackconfig)
       /* webpackDev */
-      sails.config.http.middleware.webpackDev = webpackDev(compiler, {
-        logLevel: 'debug'
-      })
-      sails.config.http.middleware.webpackHot = webpackHot(compiler, {
-        log: false,
-        heartbeat: 2000
-      })
+      let webpackDevopts = typeof (sails.config.webpackdev) === 'undefined'
+        ? { logLevel: 'debug' }
+        : sails.config.webpackdev
+      sails.config.http.middleware.webpackDev = webpackDev(compiler, webpackDevopts)
+      let webpackHotopts = typeof (sails.config.webpackhot) === 'undefined'
+        ? { log: false, heartbeat: 2000 }
+        : sails.config.webpackhot
+      sails.config.http.middleware.webpackHot = webpackHot(compiler, webpackHotopts)
       let index = sails.config.http.middleware.order.findIndex(el => el === 'router' ? el : undefined)
       sails.config.http.middleware.order.splice(index + 1, 0, 'historyFallback', 'webpackDev', 'webpackHot')
     }
