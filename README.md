@@ -7,7 +7,7 @@ npm i sails-hook-webpack4vue2
 ````
 ## config static dir
 ````
-# config/loacl.js or .sailsrc
+# config/local.js or .sailsrc
   paths:{
     public: 'public'
   }
