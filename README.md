@@ -1,4 +1,37 @@
 # sailswebpack4vue2
+## build sails with nofrontend
+````
+sails new <project name> --no-frontend
+cd <project name>
+npm i sails-hook-webpack4vue2
+````
+## config static dir
+````
+# config/loacl.js or .sailsrc
+  paths:{
+    public: 'public'
+  }
+  # or
+  "paths": {
+    "public": "public"
+  }
+````
+## config webpack
+````
+# vue.config.js
+module.exports = {
+  configureWebpack: config => {
+    if (sails.config.environment === 'development') {
+      /* HMR */
+      config.entry = {
+        app: ['./src/main.js', 'webpack-hot-middleware/client?reload=true']
+      }
+    } else {
+      /* config for production mode */
+    }
+  }
+}
+````
 ````
 mkdir public
 # public/index.html
